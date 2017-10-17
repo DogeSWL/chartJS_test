@@ -4,12 +4,8 @@ Chart.defaults.global.responsive = false;
 
 // define the chart data
 var chartData = {
-// labels : [{% for item in labels %}
-//           "{{item}}",
-//          {% endfor %}],
-labels = labels,
+labels : labels,
 datasets : [{
-   // label: '{{ legend }}',
    label: legend,
    fill: true,
    lineTension: 0.1,
@@ -28,9 +24,6 @@ datasets : [{
    pointHoverBorderWidth: 2,
    pointRadius: 1,
    pointHitRadius: 10,
-   // data : [{% for item in values %}
-   //           {{item}},
-   //         {% endfor %}],
    data : values,
    spanGaps: false
 }]
