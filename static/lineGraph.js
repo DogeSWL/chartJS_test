@@ -36,4 +36,18 @@ var ctx = document.getElementById("myChart").getContext("2d");
 var myChart = new Chart(ctx, {
 type: 'line',
 data: chartData,
+
+// Adding a callback function that adds the word ‘degrees’ 
+// to the temperature that gets displayed in the caption
+options: {
+  tooltips: {
+    enabled: true,
+    mode: 'single',
+    callbacks: {
+      label: function(tooltipItems, data) {
+               return tooltipItems.yLabel + ' degrees';
+             }
+    }
+  },
+}
 });
